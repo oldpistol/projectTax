@@ -18,8 +18,7 @@ class AuthController extends Controller
 
         $user = $loginAction->execute($data['email'], $data['password']);
 
-        if (! $user)
-        {
+        if (!$user) {
             throw new InvalidCredentialException();
         }
 

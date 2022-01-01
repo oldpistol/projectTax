@@ -20,8 +20,7 @@ class LoginAction
             ->where('email', $email)
             ->first();
 
-        if ($this->user && $this->verifyPassword($password, $this->user->password))
-        {
+        if ($this->user && $this->verifyPassword($password, $this->user->password)) {
             return $this->user;
         }
 

@@ -31,6 +31,13 @@ class LoginActionTest extends TestCase
         $this->assertTrue($loginUser instanceof User);
     }
 
+    protected function createNewUser()
+    {
+        return User::factory()->create([
+            'password' => Hash::make($this->password)
+        ]);
+    }
+
     public function test_execute_with_wrong_credentials()
     {
         $user = $this->createNewUser();
@@ -38,12 +45,5 @@ class LoginActionTest extends TestCase
         $loginUser = $this->loginAction->execute($user->email, 'wrongPassword');
 
         $this->assertNull($loginUser);
-    }
-
-    protected function createNewUser()
-    {
-        return User::factory()->create([
-            'password' => Hash::make($this->password)
-        ]);
     }
 }
