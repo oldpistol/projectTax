@@ -20,6 +20,10 @@ class CreateDocumentsTable extends Migration
             $table->decimal('price', 10);
             $table->foreignId('relief_type_id')
                 ->constrained();
+            $table->foreignId('user_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->string('path');
             $table->timestamps();
         });
     }
