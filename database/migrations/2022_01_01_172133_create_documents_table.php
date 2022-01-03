@@ -23,7 +23,7 @@ class CreateDocumentsTable extends Migration
             $table->foreignId('user_id')
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->string('path');
+            $table->string('filename');
             $table->timestamps();
         });
     }

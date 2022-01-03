@@ -41,9 +41,9 @@ class AddDocumentTest extends TestCase
             'amount' => $data['amount'],
             'relief_type_id' => $reliefType->id,
             'user_id' => $user->id,
-            'path' => $document->path
+            'filename' => $document->filename
         ]);
 
-        Storage::disk(env('FILESYSTEM_DRIVER'))->assertExists("$document->path");
+        Storage::disk(env('FILESYSTEM_DRIVER'))->assertExists("$user->id/$document->filename");
     }
 }

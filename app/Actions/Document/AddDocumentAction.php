@@ -16,9 +16,16 @@ class AddDocumentAction
             'description' => $data['description'],
             'amount' => $data['amount'],
             'relief_type_id' => $data['relief_type_id'],
-            'path' => $path
+            'filename' => $this->getGeneratedFileName($path)
         ]);
 
         return $document;
+    }
+
+    public function getGeneratedFileName(string $path)
+    {
+        $array = explode('/', $path);
+
+        return end($array);
     }
 }
