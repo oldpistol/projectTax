@@ -17,7 +17,7 @@ class CreateDocumentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('description')->nullable();
-            $table->decimal('price', 10);
+            $table->decimal('amount', 10);
             $table->foreignId('relief_type_id')
                 ->constrained();
             $table->foreignId('user_id')

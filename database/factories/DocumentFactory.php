@@ -2,10 +2,9 @@
 
 namespace Database\Factories;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class IndividualReliefTypeFactory extends Factory
+class DocumentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -15,9 +14,7 @@ class IndividualReliefTypeFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'description' => $this->faker->realText(),
-            'year' => Carbon::now()->year
+            //
         ];
     }
 }

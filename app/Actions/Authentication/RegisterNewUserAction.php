@@ -9,7 +9,7 @@ class RegisterNewUserAction
 {
     protected $userModel;
 
-    public function __construtor(User $user)
+    public function __construct(User $user)
     {
         $this->userModel = $user;
     }
