@@ -36,4 +36,9 @@ class UserTest extends TestCase
                 ]
             ]);
     }
+
+    public function test_can_get_list_of_documents_group_by_year()
+    {
+        $this->assertTrue(true);
+    }
 }

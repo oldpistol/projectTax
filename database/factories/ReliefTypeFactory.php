@@ -17,7 +17,7 @@ class ReliefTypeFactory extends Factory
         return [
             'name' => $this->faker->name,
             'description' => $this->faker->realText(),
-            'year' => Carbon::now()->year
+            'year' => rand(2015, 2021)
         ];
     }
 }
